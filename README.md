@@ -27,6 +27,6 @@ the most important rule is to keep track your expenses.
 + Transaction filter(by date, by ammount, by alphabet).
 + Total ammount and sidebar.
 ## <a name="Wireframe"></a> Wireframe:
-1. First draft version of project.
+**1. First draft version of project(desktop version).**
 ![raw_desktop_wireframe](PhotoReport/draft.jpg "It's draft.")
 
