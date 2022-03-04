@@ -27,5 +27,6 @@ the most important rule is to keep track your expenses.
 + Transaction filter(by date, by ammount, by alphabet).
 + Total ammount and sidebar.
 ## <a name="Wireframe"></a> Wireframe:
-![raw_desktop_wireframe](C:/Users/ld01/OneDrive/Рабочий стол/Sixth sem/ИТИРОД/Material/draft_scheme.jpg "It's draft.")
-![Альтернативный текст](/путь/к/изображению.jpg)
+1. First draft version of project.
+![raw_desktop_wireframe](PhotoReport/draft.jpg "It's draft.")
+
