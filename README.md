@@ -29,4 +29,6 @@ the most important rule is to keep track your expenses.
 ## <a name="Wireframe"></a> Wireframe:
 **1. First draft version of project(desktop version).**
 ![raw_desktop_wireframe](PhotoReport/draft.jpg "It's draft.")
+**2. Mock-up(desktop version).**
+![mock-up](PhotoReport/desktop_mock_up.jpg "Magic 👍")
 
