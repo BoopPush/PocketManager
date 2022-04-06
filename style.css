@@ -1,0 +1,47 @@
+body {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  text-align: center;
+  font-size: 30px
+}
+
+main {
+  min-height: 30vh;
+   background-color: #c6f183;
+   flex-grow: 1;
+  }
+
+  
+.child{
+  display: inline-block;
+}
+
+.wrapper{
+  display: flex;
+}
+
+.wrapper > section{
+  flex:1;
+}
+
+footer{
+  display: flex;
+}
+
+.f{
+display: inline-block;
+}
+
+footer > section{
+flex:1;
+}
+
+html {
+  height: 100%;
+}
+main {
+  min-height: 100%;
+}
