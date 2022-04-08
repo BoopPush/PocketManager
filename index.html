@@ -6,28 +6,37 @@
     <body>
         <header class="wrapper">
             <section class ="child">
-                <span>Month</span>
+                <div class = "month-info"><button><img src="Material/icons8-стрелка-влево-в-круге-30.png" alt="Left" 
+                    style="vertical-align: middle"> </button></div>
+                <div class = "month-info"><p style="color: #172c66;">Month<p></p></div>
+                <div class="month-info"><button><img src="Material/icons8-стрелка-вправо-в-круге-2-30.png" alt="Right" 
+                    style="vertical-align: middle"> </button></div>
             </section>
             <section class = "child">
-                <span>Hello</span>
+                <button>Week</button>
+                <button>Month</button>
+                <button>Year</button>
             </section>
         </header>
         <main>
             <section class ="info">
                 <header>
-                    <h3>inside header</h3>
+                    <button class = "add-income"><img src="Material/icons8-плюс-48.png" alt="Plus" 
+                        style="vertical-align: middle">Income</button>
+                    <button class="add-expense"><img src="Material/icons8-минус-2-48.png" alt="Minus" 
+                            style="vertical-align: middle"> Expense</button>
                 </header>
                 <div class="canvas">
                     <div class="legend">
-                        <p class="title">Что мешает во время работы дома?</p>    
+                        <p class="title">Total expenses:</p>    
                         <ul class="caption-list">
-                          <li class="caption-item">еда</li>
-                          <li class="caption-item">соседи</li>
-                          <li class="caption-item">отсутствие рабочего места</li>
-                          <li class="caption-item">мало двигаюсь</li>
-                          <li class="caption-item">отсутствие чёткого графика работы</li>
-                          <li class="caption-item">неудобная коммуникация с коллегами</li>
-                          <li class="caption-item">много ленюсь</li>
+                          <li class="caption-item">Food</li>
+                          <li class="caption-item">Gifts</li>
+                          <li class="caption-item">Sport</li>
+                          <li class="caption-item">Eating out</li>
+                          <li class="caption-item">Clothes</li>
+                          <li class="caption-item">Clubs</li>
+                          <li class="caption-item">Taxi</li>
                         </ul>
                       </div>
                       
@@ -42,21 +51,74 @@
                       </svg>
                 </div>
                 <footer>
-                    <h3>Inside footer</h3>
+                    <h3>Total balance: +1000<span class = "dollar">$</span></h3>
                 </footer>
             </section>    
-            <aside>
-                    <span>Hello I'm aside</span>
-            </aside>
+            <section class ="adding">
+                <header>
+                    <h3 class = "child" style="color: #172c66">Transaction</h3>
+                    <button class = "child"><img src="Material/icons8-вниз-в-квадрате-24.png" alt="Arrow-down" 
+                        style="vertical-align: middle"> </button>
+                </header>
+                <section><ul class="expenses-list">
+                    <li>
+                        <div class="expense-item"><button"><img src="Material/icons8-мужская-зарплата-50.png" alt="Club" 
+                            style="vertical-align: middle"> </div>
+                        <div class="expense-item"><p>Salary</p></div>
+                        <div class="expense-item"><p style="color: green;">+2000<span class="dollar">$</span></p></div>
+                    </li>
+                    <li>
+                        <div class="expense-item"><button"><img src="Material/icons8-диджей-50.png" alt="Club" 
+                            style="vertical-align: middle"> </div>
+                        <div class="expense-item"><p>Clubs</p></div>
+                        <div class="expense-item"><p style="color: red;">-150<span class="dollar">$</span></p></div>
+                    </li>
+                    <li>
+                        <div class="expense-item"><img src="Material/icons8-мужская-обувь-50.png" alt="Boot" 
+                            style="vertical-align: middle"> </div>
+                        <div class="expense-item"><p>Clothes</p></div>
+                        <div class="expense-item"><p style="color: red;">0<span class="dollar">$</span></p></div>
+                    </li>
+                    <li>
+                        <div class="expense-item"><img src="Material/icons8-полная-корзина-50.png" alt="Food" 
+                            style="vertical-align: middle"> </div>
+                        <div class="expense-item"><p>Food</p></div>
+                        <div class="expense-item"><p style="color: red;">-431<span class="dollar">$</span></p></div>
+                    </li>
+                    <li>
+                        <div class="expense-item"><img src="Material/icons8-прыжок-с-шестом-50.png" alt="Sport" 
+                            style="vertical-align: middle"> </div>
+                        <div class="expense-item"><p>Sport</p></div>
+                        <div class="expense-item"><p style="color: red;">-180<span class="dollar">$</span></p></div>
+                    </li>
+                    <li>
+                        <div class="expense-item"><img src="Material/icons8-столовые-приборы-50.png" alt="Restaurant" 
+                            style="vertical-align: middle"></div>
+                        <div class="expense-item"><p>Eating Out</p></div>
+                        <div class="expense-item"><p style="color: red;">-12<span class="dollar">$</span></p></div>
+                    </li>
+                    <li>
+                        <div class="expense-item"><img src="Material/icons8-такси-50.png" alt="Taxi" 
+                            style="vertical-align: middle"></div>
+                        <div class="expense-item"><p>Taxi</p></div>
+                        <div class="expense-item"><p style="color: red;">0<span class="dollar">$</span></p></div>
+                    </li>
+                    <li>
+                        <div class="expense-item"><img src="Material/icons8-рождественский-подарок-50.png" alt="Gift" 
+                            style="vertical-align: middle"></div>
+                        <div class="expense-item"><p>Gifts</p></div>
+                        <div class="expense-item"><p style="color: red;">-73<span class="dollar">$</span></p></div>
+                    </li>
+                </ul></section>
+            </section>
         </main>
         
         <footer class = "first_footer">
             <section class="f">
-                <nav>
-                <h4>info about us</h4>
-            </nav>
+                <nav><a href="#">Info</a>
+                <a href="#">About me</a></nav>
             </section>
-            <section class = "f"><span>2022</span> </section>
+            <section class = "Copyright"><p>&copy Copyright 2022</p> </section>
         </footer>
     </body>
 </html>
