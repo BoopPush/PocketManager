@@ -21,10 +21,10 @@
         <main>
             <section class ="info">
                 <header>
-                    <button class = "add-income"><img src="Material/plus-48.png" alt="Plus" 
-                        style="vertical-align: middle">Income</button>
-                    <button class="add-expense"><img src="Material/minus-48.png" alt="Minus" 
-                            style="vertical-align: middle"> Expense</button>
+                    <a href="#openModalIncome" class = "add-income"><img src="Material/plus-48.png" alt="Plus" 
+                        style="vertical-align: middle">Income</a>
+                    <a href="#openModalExpense" class="add-expense"><img src="Material/minus-48.png" alt="Minus" 
+                            style="vertical-align: middle"> Expense</a>
                 </header>
                 <div class="canvas">
                     <div class="legend">
@@ -121,15 +121,46 @@
             <section class = "Copyright"><p>&copy Copyright 2022</p> </section>
         </footer>
     </body>
-    <div id="openModal" class="modal">
+    <div id="openModalIncome" class="modal">
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
-              <h3 class="modal-title">Название</h3>
+              <h3 class="modal-title">Income adding...</h3>
               <a href="#close" title="Close" class="close">×</a>
             </div>
             <div class="modal-body">    
-              <p>Содержимое модального окна...</p>
+              <div><span>Choose income: </span><span><select> 
+                <option value="">Select an option</option> 
+                <option value="Salary">Salary</option> 
+                <option value="Lottery">Lottery</option> 
+              </select>
+                </span></div>
+                <div><span>Enter ammount: </span><span><input type="text" id="ammount"></span></div>
+                <div><button class="accept">Accept</button></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="openModalExpense" class="modal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h3 class="modal-title">Expense adding...</h3>
+              <a href="#close" title="Close" class="close">×</a>
+            </div>
+            <div class="modal-body">    
+              <div><span>Choose expense: </span><span><select> 
+                <option value="">Select an option</option> 
+                <option value="Gifts">Gifts</option> 
+                <option value="Sport">Sport</option> 
+                <option value="Taxi">Taxi</option> 
+                <option value="Eating out">Eating out</option>
+                <option value="Clubs">Clubs</option>
+                <option value="Clothes">Clothes</option>
+              </select>
+                </span></div>
+                <div><span>Enter ammount: </span><span><input type="text" id="ammount"></span></div>
+                <div><button class="accept">Accept</button></div>
             </div>
           </div>
         </div>
