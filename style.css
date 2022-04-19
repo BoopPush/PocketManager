@@ -497,6 +497,9 @@ select {
   padding: 0 7px; 
 }
 
+hr{
+  visibility: hidden;
+}
 
 span,h3{
   color:#001858;
@@ -512,4 +515,39 @@ input{
   width: 100px;
   height: 40px;
   font-size: 50%;
+}
+
+@media only screen and (max-width: 768px) {
+  main{
+     font-size: 20px;
+     display: inline;
+  }
+
+  .wrapper{
+    display: inline;
+  }
+
+  .info header{
+    display: inline;
+  }
+
+  .info{
+    width:100%;
+  }
+
+  .adding{
+    width: 100%;
+  }
+
+  .f nav{
+    margin-left: 0px;
+  }
+  
+  hr{
+    visibility:visible;
+    border: none; /* Убираем границу */
+    background-color: #fef6e4; /* Цвет линии */
+    color: #fef6e4; /* Цвет линии для IE6-7 */
+    height: 5px; /* Толщина линии */
+  }
 }
