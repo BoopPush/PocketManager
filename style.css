@@ -501,7 +501,7 @@ hr{
   visibility: hidden;
 }
 
-span,h3{
+span,h3,label{
   color:#001858;
 }
 
@@ -543,6 +543,7 @@ input{
     margin-left: 0px;
   }
   
+
   hr{
     visibility:visible;
     border: none; /* Убираем границу */
