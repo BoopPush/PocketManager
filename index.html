@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css" type="text/css"/>
+    </head>
+    <body>
+        <header class="wrapper">
+            <section class ="child">
+                <div class = "month-info"><button><img src="Material/left-arrow.png" alt="Left" 
+                    style="vertical-align: middle"> </button></div>
+                <div class = "month-info"><p style="color: #172c66;">Month<p></p></div>
+                <div class="month-info"><button><img src="Material/right-arrow.png" alt="Right" 
+                    style="vertical-align: middle"> </button></div>
+            </section>
+            <section class = "child">
+                <button>Week</button>
+                <button>Month</button>
+                <button>Year</button>
+            </section>
+        </header>
+        <main>
+            <section class ="info">
+                <header>
+                    <a href="#openModalIncome" class = "add-income"><img src="Material/plus-48.png" alt="Plus" 
+                        style="vertical-align: middle">Income</a>
+                    <a href="#openModalExpense" class="add-expense"><img src="Material/minus-48.png" alt="Minus" 
+                            style="vertical-align: middle"> Expense</a>
+                </header>
+                <div class="canvas">
+                    <div class="legend">
+                        <p class="title">Total expenses:</p>    
+                        <ul class="caption-list">
+                          <li class="caption-item">Food</li>
+                          <li class="caption-item">Gifts</li>
+                          <li class="caption-item">Sport</li>
+                          <li class="caption-item">Eating out</li>
+                          <li class="caption-item">Clothes</li>
+                          <li class="caption-item">Clubs</li>
+                          <li class="caption-item">Taxi</li>
+                        </ul>
+                      </div>
+                      
+                    <svg class="chart" width="400" height="400" viewBox="0 0 50 50">
+                        <circle class="unit" r="15.9" cx="50%" cy="50%"></circle>
+                        <circle class="unit" r="15.9" cx="50%" cy="50%"></circle>
+                        <circle class="unit" r="15.9" cx="50%" cy="50%"></circle>
+                        <circle class="unit" r="15.9" cx="50%" cy="50%"></circle>
+                        <circle class="unit" r="15.9" cx="50%" cy="50%"></circle>
+                        <circle class="unit" r="15.9" cx="50%" cy="50%"></circle>
+                        <circle class="unit" r="15.9" cx="50%" cy="50%"></circle>
+                      </svg>
+                </div>
+                <footer>
+                    <h3>Total balance: +1000<span class = "dollar">$</span></h3>
+                </footer>
+            </section>
+            <hr>
+            <section class ="adding">
+                <header>
+                    <h3 class = "child" style="color: #172c66">Transaction</h3>
+                    <button class = "child"><img src="Material/arrow-down.png" alt="Arrow-down" 
+                        style="vertical-align: middle"> </button>
+                </header>
+                <section><ul class="expenses-list">
+                    <li>
+                        <div class="expense-item"><button"><img src="Material/salary.png" alt="Club" 
+                            style="vertical-align: middle"> </div>
+                        <div class="expense-item"><p>Salary</p></div>
+                        <div class="expense-item"><p style="color: green;">+2000<span class="dollar">$</span></p></div>
+                    </li>
+                    <li>
+                        <div class="expense-item"><button"><img src="Material/dj.png" alt="Club" 
+                            style="vertical-align: middle"> </div>
+                        <div class="expense-item"><p>Clubs</p></div>
+                        <div class="expense-item"><p style="color: red;">-150<span class="dollar">$</span></p></div>
+                    </li>
+                    <li>
+                        <div class="expense-item"><img src="Material/shoe.png" alt="Boot" 
+                            style="vertical-align: middle"> </div>
+                        <div class="expense-item"><p>Clothes</p></div>
+                        <div class="expense-item"><p style="color: red;">0<span class="dollar">$</span></p></div>
+                    </li>
+                    <li>
+                        <div class="expense-item"><img src="Material/basket.png" alt="Food" 
+                            style="vertical-align: middle"> </div>
+                        <div class="expense-item"><p>Food</p></div>
+                        <div class="expense-item"><p style="color: red;">-431<span class="dollar">$</span></p></div>
+                    </li>
+                    <li>
+                        <div class="expense-item"><img src="Material/sport-jump.png" alt="Sport" 
+                            style="vertical-align: middle"> </div>
+                        <div class="expense-item"><p>Sport</p></div>
+                        <div class="expense-item"><p style="color: red;">-180<span class="dollar">$</span></p></div>
+                    </li>
+                    <li>
+                        <div class="expense-item"><img src="Material/catlery.png" alt="Restaurant" 
+                            style="vertical-align: middle"></div>
+                        <div class="expense-item"><p>Eating Out</p></div>
+                        <div class="expense-item"><p style="color: red;">-12<span class="dollar">$</span></p></div>
+                    </li>
+                    <li>
+                        <div class="expense-item"><img src="Material/taxi.png" alt="Taxi" 
+                            style="vertical-align: middle"></div>
+                        <div class="expense-item"><p>Taxi</p></div>
+                        <div class="expense-item"><p style="color: red;">0<span class="dollar">$</span></p></div>
+                    </li>
+                    <li>
+                        <div class="expense-item"><img src="Material/gift.png" alt="Gift" 
+                            style="vertical-align: middle"></div>
+                        <div class="expense-item"><p>Gifts</p></div>
+                        <div class="expense-item"><p style="color: red;">-73<span class="dollar">$</span></p></div>
+                    </li>
+                </ul></section>
+            </section>
+        </main>
+        
+        <footer class = "first_footer">
+            <section class="f">
+                <nav><a href="#">Info</a>
+                <a href="#">About me</a></nav>
+            </section>
+            <section class = "Copyright"><p>&copy Copyright 2022</p> </section>
+        </footer>
+    </body>
+    <form action="">
+    <div id="openModalIncome" class="modal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h3 class="modal-title">Income adding...</h3>
+              <a href="#close" title="Close" class="close">×</a>
+            </div>
+            <div class="modal-body">    
+              <div><span>Choose income: </span><span><select> 
+                <option value="">Select an option</option> 
+                <option value="Salary">Salary</option> 
+                <option value="Lottery">Lottery</option> 
+              </select>
+                </span></div>
+                <div><label>Enter ammount: </label><span><input type="text" id="ammount"></span></div>
+                <div><button class="accept">Accept</button></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+    <form action="">
+      <div id="openModalExpense" class="modal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h3 class="modal-title">Expense adding...</h3>
+              <a href="#close" title="Close" class="close">×</a>
+            </div>
+            <div class="modal-body">    
+              <div><span>Choose expense: </span><span><select> 
+                <option value="">Select an option</option> 
+                <option value="Gifts">Gifts</option> 
+                <option value="Sport">Sport</option> 
+                <option value="Taxi">Taxi</option> 
+                <option value="Eating out">Eating out</option>
+                <option value="Clubs">Clubs</option>
+                <option value="Clothes">Clothes</option>
+              </select>
+                </span></div>
+                <div><label>Enter ammount: </label><span><input type="text" id="ammount"></span></div>
+                <div><button class="accept">Accept</button></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+    <form action="">
+      <div id="Authorization" class="modal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h3 class="modal-title">Authorization</h3>
+              <a href="#close" title="Close" class="close">×</a>
+            </div>
+            <div class="modal-body"> 
+                <div><label>Enter your name: </label><span><input type="text"></span></div>
+                <div><label>Enter your password: </label><span><input type="text"></span></div>
+                <div><button class="accept">Enter</button></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+</html>

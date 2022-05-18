@@ -1,0 +1,554 @@
+body {
+  background-color:#fef6e4;
+  height:auto;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  text-align: center;
+  font-size: 30px
+}
+
+header{
+  min-height: 10vh;
+}
+
+main {
+  
+  min-height: 40vh;
+  display: flex;
+  justify-content: center;
+  background-color: #f3d2c1;
+  }
+
+  
+.child{
+  display: inline-block;
+}
+
+.child:last-child button{
+  font-size: 110%;
+}
+
+.wrapper{
+  display: flex;
+}
+
+.wrapper > section{
+  flex:1;
+}
+
+.month-info{
+  display: inline-block;
+}
+
+.month-info p{
+  font-weight: bold;
+}
+
+.first_footer{
+  clear: both;
+  float: right;
+  display: flex;
+  min-height: 10vh;
+}
+
+.f{
+display: inline-block;
+}
+
+footer > section{
+flex:1;
+}
+
+html {
+  height: 100%;
+}
+main {
+  min-height: 100%;
+}
+
+
+
+aside { 
+  position: relative;
+  float:right;
+  width:170px; 
+  top: 0px;
+  bottom: 0px;
+}
+
+.canvas {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 800px;
+}
+
+.unit {
+  fill: none;
+  stroke-width: 10;
+  animation-name: render;
+  animation-duration: 1.5s;
+  transition-property: all; 
+  transition-duration: 1.5s;
+}
+
+.unit:nth-child(1) {
+  stroke: #86cfa3;
+  stroke-dasharray: 8 100;
+}
+
+.unit:nth-child(2) {
+  stroke: #a2c6e0;
+  stroke-dasharray: 11 100;
+  stroke-dashoffset: -8;
+}
+
+.unit:nth-child(3) {
+  stroke: #ffc7ec;
+  stroke-dasharray: 30 100;
+  stroke-dashoffset: -19;
+}
+
+.unit:nth-child(4) {
+  stroke: #8b86cf;
+  stroke-dasharray: 19 100;
+  stroke-dashoffset: -49;
+}
+
+.unit:nth-child(5) {
+  stroke: #c5ce49;
+  stroke-dasharray: 11 100;
+  stroke-dashoffset: -68;
+}
+
+.unit:nth-child(6) {
+  stroke: #af1d1d;
+  stroke-dasharray: 9 100;
+  stroke-dashoffset: -79;
+}
+
+.unit:nth-child(7) {
+  stroke: #33b7c0;
+  stroke-dasharray: 20 100;
+  stroke-dashoffset: -88;
+}
+
+.legend {
+  max-width: 250px;
+  margin-left: 30px;
+}
+
+.title {  
+  font-family: "Verdana", sans-serif;
+  font-size: 30px;
+  line-height: 21px;
+  color: #591d48;
+}
+
+.caption-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  margin-left:30px;
+}
+
+.item-list{
+  list-style: none;
+}
+
+.caption-item {
+  position: relative;
+
+  margin: 20px 0;
+  padding-left: 30px;
+  
+  font-family: "Verdana", sans-serif;
+  font-size: 16px;
+  line-height: 18px;
+  color: #591d48;  
+  cursor: pointer;
+}
+
+.caption-item:hover {
+  opacity: 0.8;
+}
+
+.caption-item::before {
+  content: "";
+  
+  position: absolute;
+  top: 0;
+  left: 0;
+  
+  width: 20px;
+  height: 20px;
+  
+  border-radius: 8px;
+}
+
+.caption-item:nth-child(1)::before {
+  background-color: #86cfa3;
+}
+
+.caption-item:nth-child(2)::before {
+  background-color: #a2c6e0;
+}
+
+.caption-item:nth-child(3)::before {
+  background-color: #ffc7ec;
+}
+
+.caption-item:nth-child(4)::before {
+  background-color: #8b86cf;
+}
+
+.caption-item:nth-child(5)::before {
+  background-color: #c5ce49;
+}
+
+.caption-item:nth-child(6)::before {
+  background-color: #af1d1d;
+}
+.caption-item:nth-child(7)::before {
+  background-color: #33b7c0;
+}
+
+
+@keyframes render {
+  0% {
+    stroke-dasharray: 0 100;
+  }
+}
+
+.info{
+  width: 50%;
+}
+
+.adding{
+  width: 50%;
+}
+
+.unit:hover {
+  opacity: 0.8;
+  stroke-width: 12;
+}
+
+button{
+  border: 2px solid #001858;
+  margin:20px;
+  background: #f582ae;
+  color:#001858;
+  font-weight:bold;
+}
+
+.add-income{
+  border: 2px solid #001858;
+  margin-top: 5px;
+  font-weight:bold;
+  display: inline-block;
+  background: #f582ae;
+  color:#001858;
+  text-decoration: none;
+  float: left;
+  margin-left: 100px;  
+  font-size: 100%;
+}
+
+.add-expense{
+  border: 2px solid #001858;
+  margin-top: 5px;
+  font-weight:bold;
+  display: inline-block;
+  background: #f582ae;
+  text-decoration: none;
+  color:#001858;
+  font-size:100%;
+}
+
+.add-expense:hover,.add-income:hover{
+    background: rgba(0,0,0,0);
+    color: #001858;
+    box-shadow: inset 0 0 0 3px #f582ae;
+}
+
+.adding{
+  text-align: center;
+  float: righ;
+}
+
+.expense-item
+{
+  margin: 0 0;
+	height: 100px;
+	display: inline-block;
+	background: #fef6e4;
+	width: 30%;
+  position: relative;
+  text-align: center;
+}
+
+.expense-item p{
+  font-weight: bold;
+}
+
+.expense-item img{
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+}
+
+.dollar{
+  color:green;
+  font-size: 120%;
+}
+
+.expenses-list{
+  list-style: none;
+  padding: 0;
+  background-color: #001858;
+  overflow: scroll;
+  height: 400px;
+  overflow-x: hidden;
+  
+}
+
+.expenses-list li{
+  display:flex;
+  justify-content: space-around;
+  align-items:center;
+  margin:25px 0px;
+}
+
+
+
+.expenses-list::-webkit-scrollbar {
+  width: 10px;
+}
+
+.expenses-list::-webkit-scrollbar-track {
+  box-shadow: #001858;
+  -webkit-box-shadow: 5px 5px 5px -5px rgba(34, 60, 80, 0.2) inset;
+  background-color: #fef6e4;
+}
+
+.expenses-list::-webkit-scrollbar-thumb {
+  background-color: #356184;
+}
+
+
+button:hover {
+	background: rgba(0,0,0,0);
+	color: #001858;
+	box-shadow: inset 0 0 0 3px #f582ae;
+}
+
+.Copyright{
+  text-align: right; 
+  font-size: 20px; 
+  margin-top: 50px;
+}
+
+nav{
+  text-align: left;
+margin:35px 15px;
+}
+
+nav a {
+  margin:0 5px;
+  color: #001858;
+  border: 3px solid #001858; /* Синяя рамка вокруг ссылок */
+  padding: 2px; /* Поля вокруг текста */
+  text-decoration: none; /* Скрываем подчёркивание */
+ }
+nav a:hover {
+  border: 3px solid pink; /* Красная рамка при наведении курсора на ссылку */
+ }
+
+
+/* свойства модального окна по умолчанию */
+.modal {
+  position: fixed; /* фиксированное положение */
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0,0,0,0.5); /* цвет фона */
+  z-index: 1050;
+  opacity: 0; /* по умолчанию модальное окно прозрачно */
+  -webkit-transition: opacity 200ms ease-in; 
+  -moz-transition: opacity 200ms ease-in;
+  transition: opacity 200ms ease-in; /* анимация перехода */
+  pointer-events: none; /* элемент невидим для событий мыши */
+  margin: 0;
+  padding: 0;
+}
+/* при отображении модального окно */
+.modal:target {
+  opacity: 1; /* делаем окно видимым */
+  pointer-events: auto; /* элемент видим для событий мыши */
+  overflow-y: auto; /* добавляем прокрутку по y, когда элемент не помещается на страницу */
+}
+/* ширина модального окна и его отступы от экрана */
+.modal-dialog {
+  position: relative;
+  width: auto;
+  margin: 10px;
+}
+@media (min-width: 576px) {
+.modal-dialog {
+    max-width: 500px;
+    margin: 30px auto; /* для отображения модального окна по центру */
+}
+}
+/* свойства для блока, содержащего контент модального окна */ 
+.modal-content {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  background-color: #fff;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  border: 1px solid rgba(0,0,0,.2);
+  border-radius: .3rem;
+  outline: 0;
+}
+@media (min-width: 768px) {
+.modal-content {
+    -webkit-box-shadow: 0 5px 15px rgba(0,0,0,.5);
+    box-shadow: 0 5px 15px rgba(0,0,0,.5);
+}
+}
+/* свойства для заголовка модального окна */
+.modal-header {
+  background-color: #fef6e4;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 15px;
+  border-bottom: 1px solid #eceeef;
+}
+.modal-title {
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 1.5;
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+/* свойства для кнопки "Закрыть" */
+.close {
+  float: right;
+  font-family: sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1;
+  color: #000;
+  text-shadow: 0 1px 0 #fff;
+  opacity: .5;
+  text-decoration: none;
+}
+/* свойства для кнопки "Закрыть" при нахождении её в фокусе или наведении */
+.close:focus, .close:hover {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+  opacity: .75;
+}
+/* свойства для блока, содержащего основное содержимое окна */
+.modal-body {
+  background-color: #f3d2c1;
+position: relative;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  padding: 15px;
+  overflow: auto;
+}
+
+select { 
+  margin-right: 30px;
+  font-weight: bold;
+  color:#001858;
+  background-color: #f582ae;
+  height: 35px; 
+  line-height: 35px; 
+  padding: 0 7px; 
+}
+
+hr{
+  visibility: hidden;
+}
+
+span,h3,label{
+  color:#001858;
+}
+
+input{
+  box-sizing: border-box;
+  border: 2px solid #f582ae;
+  border-radius: 4px;
+}
+
+.accept{
+  width: 100px;
+  height: 40px;
+  font-size: 50%;
+}
+
+@media only screen and (max-width: 768px) {
+  main{
+     font-size: 20px;
+     display: inline;
+  }
+
+  .wrapper{
+    display: inline;
+  }
+
+  .info header{
+    display: inline;
+  }
+
+  .info{
+    width:100%;
+  }
+
+  .adding{
+    width: 100%;
+  }
+
+  .f nav{
+    margin-left: 0px;
+  }
+  
+
+  hr{
+    visibility:visible;
+    border: none; /* Убираем границу */
+    background-color: #fef6e4; /* Цвет линии */
+    color: #fef6e4; /* Цвет линии для IE6-7 */
+    height: 5px; /* Толщина линии */
+  }
+}
