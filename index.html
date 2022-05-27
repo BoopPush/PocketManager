@@ -51,7 +51,7 @@
                       </svg>
                 </div>
                 <footer>
-                    <h3>Total balance: +1000<span class = "dollar">$</span></h3>
+                    <h3 style="display: inline-block;">Total balance: +1000</h3><span class = "dollar">$</span>
                 </footer>
             </section>
             <hr>
@@ -66,49 +66,49 @@
                         <div class="expense-item"><button"><img src="Material/salary.png" alt="Club" 
                             style="vertical-align: middle"> </div>
                         <div class="expense-item"><p>Salary</p></div>
-                        <div class="expense-item"><p style="color: green;">+2000<span class="dollar">$</span></p></div>
+                        <div class="expense-item"><p id = "salary" style="color: green; display: inline-block;">+2000</p><span class="dollar">$</span></div>
                     </li>
                     <li>
                         <div class="expense-item"><button"><img src="Material/dj.png" alt="Club" 
                             style="vertical-align: middle"> </div>
                         <div class="expense-item"><p>Clubs</p></div>
-                        <div class="expense-item"><p style="color: red;">-150<span class="dollar">$</span></p></div>
+                        <div class="expense-item"><p id ="clubs" style="color: red; display: inline-block;">-150</p><span class="dollar">$</span></div>
                     </li>
                     <li>
                         <div class="expense-item"><img src="Material/shoe.png" alt="Boot" 
                             style="vertical-align: middle"> </div>
                         <div class="expense-item"><p>Clothes</p></div>
-                        <div class="expense-item"><p style="color: red;">0<span class="dollar">$</span></p></div>
+                        <div class="expense-item"><p id="clothes" style="color: red; display: inline-block;">0</p><span class="dollar">$</span></div>
                     </li>
                     <li>
                         <div class="expense-item"><img src="Material/basket.png" alt="Food" 
                             style="vertical-align: middle"> </div>
                         <div class="expense-item"><p>Food</p></div>
-                        <div class="expense-item"><p style="color: red;">-431<span class="dollar">$</span></p></div>
+                        <div class="expense-item"><p id="food" style="color: red; display: inline-block;">-431</p><span class="dollar">$</span></div>
                     </li>
                     <li>
                         <div class="expense-item"><img src="Material/sport-jump.png" alt="Sport" 
                             style="vertical-align: middle"> </div>
                         <div class="expense-item"><p>Sport</p></div>
-                        <div class="expense-item"><p style="color: red;">-180<span class="dollar">$</span></p></div>
+                        <div class="expense-item"><p id="sport" style="color: red; display: inline-block;">-180</p><span class="dollar">$</span></div>
                     </li>
                     <li>
                         <div class="expense-item"><img src="Material/catlery.png" alt="Restaurant" 
                             style="vertical-align: middle"></div>
                         <div class="expense-item"><p>Eating Out</p></div>
-                        <div class="expense-item"><p style="color: red;">-12<span class="dollar">$</span></p></div>
+                        <div class="expense-item"><p id="eatingOut" style="color: red; display: inline-block;">-12</p><span class="dollar">$</span></div>
                     </li>
                     <li>
                         <div class="expense-item"><img src="Material/taxi.png" alt="Taxi" 
                             style="vertical-align: middle"></div>
                         <div class="expense-item"><p>Taxi</p></div>
-                        <div class="expense-item"><p style="color: red;">0<span class="dollar">$</span></p></div>
+                        <div class="expense-item"><p id="taxi" style="color: red; display: inline-block;">0</p><span class="dollar">$</span></div>
                     </li>
                     <li>
                         <div class="expense-item"><img src="Material/gift.png" alt="Gift" 
                             style="vertical-align: middle"></div>
                         <div class="expense-item"><p>Gifts</p></div>
-                        <div class="expense-item"><p style="color: red;">-73<span class="dollar">$</span></p></div>
+                        <div class="expense-item" ><p id="gifts" style="color: red; display: inline-block;">-73</p><span class="dollar">$</span></div>
                     </li>
                 </ul></section>
             </section>
@@ -131,14 +131,15 @@
               <a href="#close" title="Close" class="close">×</a>
             </div>
             <div class="modal-body">    
-              <div><span>Choose income: </span><span><select> 
+              <div><span>Choose income: </span><span>
+                <select id="selectIncome"> 
                 <option value="">Select an option</option> 
                 <option value="Salary">Salary</option> 
                 <option value="Lottery">Lottery</option> 
               </select>
                 </span></div>
-                <div><label>Enter ammount: </label><span><input type="text" id="ammount"></span></div>
-                <div><button class="accept">Accept</button></div>
+                <div><label>Enter ammount: </label><span><input type="text" id="ammountIncome"></span></div>
+                <div><button class="accept" id="addIncome">Accept</button></div>
             </div>
           </div>
         </div>
@@ -153,7 +154,8 @@
               <a href="#close" title="Close" class="close">×</a>
             </div>
             <div class="modal-body">    
-              <div><span>Choose expense: </span><span><select> 
+              <div><span>Choose expense: </span><span>
+                <select id="selectExpense"> 
                 <option value="">Select an option</option> 
                 <option value="Gifts">Gifts</option> 
                 <option value="Sport">Sport</option> 
@@ -163,8 +165,8 @@
                 <option value="Clothes">Clothes</option>
               </select>
                 </span></div>
-                <div><label>Enter ammount: </label><span><input type="text" id="ammount"></span></div>
-                <div><button class="accept">Accept</button></div>
+                <div><label>Enter ammount: </label><span><input type="text" id="ammountExpense"></span></div>
+                <div><button class="accept" id="addExpense">Accept</button></div>
             </div>
           </div>
         </div>
@@ -187,4 +189,5 @@
         </div>
       </div>
     </form>
+    <script src="script.js"></script> 
 </html>
