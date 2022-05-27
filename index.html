@@ -12,10 +12,9 @@
                 <div class="month-info"><button id="nextMonth"><img src="Material/right-arrow.png" alt="Right" 
                     style="vertical-align: middle" > </button></div>
             </section>
-            <section class = "child">
-                <button>Week</button>
-                <button>Month</button>
-                <button>Year</button>
+            <section class = "child" style="display: inline-block; width: 100%;">
+                <a href="#Authorization" class = "add-income" style="display: inline-block; margin-top: 35px;">Registrate</a>
+                  <a href="#Enter" class = "add-income" style="margin-top: 35px;">Enter</a>
             </section>
         </header>
         <main>
@@ -188,6 +187,25 @@
             </div>
             <div class="modal-body"> 
                 <div><label>Enter your name: </label><span><input type="text"></span></div>
+                <div><label>Enter your surname: </label><span><input type="text"></span></div>
+                <div><label>Enter your email: </label><span><input type="text"></span></div>
+                <div><label>Enter your password: </label><span><input type="text"></span></div>
+                <div><button class="accept">Enter</button></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+    <form id="enterForm">
+      <div id="Enter" class="modal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h3 class="modal-title">Enter</h3>
+              <a href="#close" title="Close" class="close">×</a>
+            </div>
+            <div class="modal-body"> 
+                <div><label>Enter your email: </label><span><input type="text"></span></div>
                 <div><label>Enter your password: </label><span><input type="text"></span></div>
                 <div><button class="accept">Enter</button></div>
             </div>
@@ -196,5 +214,6 @@
       </div>
     </form>
     <script src="script.js"></script> 
-    <script type="module" src="server.js"></script> 
+    <script type="module" src="server.js"></script>
+    <script src="enter.js"></script>
 </html>
