@@ -6,11 +6,11 @@
     <body>
         <header class="wrapper">
             <section class ="child">
-                <div class = "month-info"><button><img src="Material/left-arrow.png" alt="Left" 
+                <div class = "month-info"><button  id="prevMonth"><img src="Material/left-arrow.png" alt="Left" 
                     style="vertical-align: middle"> </button></div>
-                <div class = "month-info"><p style="color: #172c66;">Month<p></p></div>
-                <div class="month-info"><button><img src="Material/right-arrow.png" alt="Right" 
-                    style="vertical-align: middle"> </button></div>
+                <div class = "month-info"><p style="color: #172c66; " id="monthInfo">Month<p></p></div>
+                <div class="month-info"><button id="nextMonth"><img src="Material/right-arrow.png" alt="Right" 
+                    style="vertical-align: middle" > </button></div>
             </section>
             <section class = "child">
                 <button>Week</button>
@@ -98,6 +98,12 @@
                         <div class="expense-item"><p>Eating Out</p></div>
                         <div class="expense-item"><p id="eatingOut" style="color: red; display: inline-block;">0</p><span class="dollar">$</span></div>
                     </li>
+                    <li>
+                      <div class="expense-item"><img src="Material/lottery.png" alt="Lot" 
+                          style="vertical-align: middle"></div>
+                      <div class="expense-item"><p>Lottery</p></div>
+                      <div class="expense-item"><p id="lottery" style="color: green; display: inline-block;">0</p><span class="dollar">$</span></div>
+                  </li>
                     <li>
                         <div class="expense-item"><img src="Material/taxi.png" alt="Taxi" 
                             style="vertical-align: middle"></div>
