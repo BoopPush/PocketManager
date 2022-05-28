@@ -4,13 +4,13 @@ import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com
 
 
   const firebaseConfig = {
-    apiKey: "AIzaSyDMuiVXTEufrF5WlXFRU_Ty6l_oexLgYAo",
-    authDomain: "pocketmanager-447dd.firebaseapp.com",
-    projectId: "pocketmanager-447dd",
-    storageBucket: "pocketmanager-447dd.appspot.com",
-    messagingSenderId: "109999395890",
-    appId: "1:109999395890:web:ff6b8fc9d01bdfe81a982b",
-    measurementId: "G-8CKB0VB5L0"
+        apiKey: "AIzaSyDMuiVXTEufrF5WlXFRU_Ty6l_oexLgYAo",
+        authDomain: "pocketmanager-447dd.firebaseapp.com",
+        projectId: "pocketmanager-447dd",
+        storageBucket: "pocketmanager-447dd.appspot.com",
+        messagingSenderId: "109999395890",
+        appId: "1:109999395890:web:ff6b8fc9d01bdfe81a982b",
+        measurementId: "G-8CKB0VB5L0"
   };
 
 

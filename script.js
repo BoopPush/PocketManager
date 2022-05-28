@@ -19,33 +19,51 @@ addExpense.onclick = () => {
     switch (selectValue) {
         case "Gifts":
             var val = document.getElementById("ammountExpense").value;
-            gifts.innerHTML = "-" + val;
-            showBalance(val,0);
+            var prevVal = gifts.textContent;
+            console.log(prevVal);
+            result = Number(val) + (Number(prevVal)*(-1));
+            gifts.innerHTML = "-" + result;
+            showBalance(Number(val),0);
             break;
         case "Sport":
             var val = document.getElementById("ammountExpense").value;
-            sport.innerHTML = "-" + val;
-            showBalance(val,0);
+            var prevVal = sport.textContent;
+            console.log(prevVal);
+            result = Number(val) + (Number(prevVal)*(-1));
+            sport.innerHTML = "-" + result;
+            showBalance(Number(val),0);
             break;
         case "Taxi":
             var val = document.getElementById("ammountExpense").value;
-            taxi.innerHTML = "-" + val;
-            showBalance(val,0);
+            var prevVal = taxi.textContent;
+            console.log(prevVal);
+            result = Number(val) + (Number(prevVal)*(-1));
+            taxi.innerHTML = "-" + result;
+            showBalance(Number(val),0);
             break;
         case "Eating out":
             var val = document.getElementById("ammountExpense").value;
-            eatingOut.innerHTML = "-" + val;
-            showBalance(val,0);
+            var prevVal = eatingOut.textContent;
+            console.log(prevVal);
+            result = Number(val) + (Number(prevVal)*(-1));
+            eatingOut.innerHTML = "-" + result;
+            showBalance(Number(val),0);
             break;
         case "Clubs":
             var val = document.getElementById("ammountExpense").value;
-            clubs.innerHTML = "-" + val;
-            showBalance(val,0);
+            var prevVal = clubs.textContent;
+            console.log(prevVal);
+            result = Number(val) + (Number(prevVal)*(-1));
+            clubs.innerHTML = "-" + result;
+            showBalance(Number(val),0);
             break;
         case "Clothes":
             var val = document.getElementById("ammountExpense").value;
-            clothes.innerHTML = "-" + val;
-            showBalance(val,0);
+            var prevVal = clothes.textContent;
+            console.log(prevVal);
+            result = Number(val) + (Number(prevVal)*(-1));
+            clothes.innerHTML = "-" + result;
+            showBalance(Number(val),0);
             break;
     }
 }
@@ -56,21 +74,32 @@ addIncome.onclick = () => {
     switch (selectValue) {
         case "Salary":
             var val = document.getElementById("ammountIncome").value;
-            salary.innerHTML = "+" + val;
-            showBalance(0,val);
+            var prevVal = salary.textContent;
+            console.log(prevVal);
+            let result = Number(val) + Number(prevVal);
+            salary.innerHTML = "+" + result;
+            showBalance(0,Number(val));
             break;
         case "Lottery":
             var val = document.getElementById("ammountIncome").value;
-            lottery.innerHTML = "+" + val;
-            showBalance(0,val)
+            var prevVal = lottery.textContent;
+            console.log(prevVal);
+            result = Number(val) + Number(prevVal);
+            lottery.innerHTML = "+" + result;
+            showBalance(0,Number(val))
             break;
     }
 }
 
 const balance = document.getElementById("balance");
 function showBalance(val1,val2) {
-    expenses.push(val1);
-    incomes.push(val2);
+    if(val1 ==0){
+        incomes.push(val2);
+    }
+    else if(val2==0){
+        expenses.push(val1);
+    }
+    
     let expenseResult = 0;
     let incomeResult = 0;
     expenses.forEach(element => {
@@ -80,7 +109,7 @@ function showBalance(val1,val2) {
         incomeResult += element;
     });
     var result = incomeResult - expenseResult;
-    console.log(result);
+    //console.log(result);
     if (result < 0) {
         balance.innerHTML = "Total balance: " + result;
     }

@@ -1,7 +1,7 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.8.0/firebase-app.js";
 import {
   getAuth,
-  signInWithEmailAndPassword,
+  createUserWithEmailAndPassword,
 } from "https://www.gstatic.com/firebasejs/9.8.0/firebase-auth.js";
 
 const firebaseConfig = {
@@ -18,24 +18,21 @@ const app = initializeApp(firebaseConfig);
 
 const auth = getAuth(app);
 
-let submit = document.getElementById("btn-enter");
+let submit = document.getElementById("btn-auth");
 
 submit.addEventListener("click", function (event) {
   event.preventDefault();
-  let username = document.getElementById("email-enter").value;
-  let password = document.getElementById("password-enter").value;
-  let validation = document.getElementsByClassName("validation")[0];
+  let username = document.getElementById("email-auth").value;
+  let password = document.getElementById("password-auth").value;
+  let validation = document.getElementsByClassName("validation1")[0];
   if (username == "" || password == "") {
     validation.textContent = "empty fields";
     return;
   }
-  signInWithEmailAndPassword(auth, username, password)
+  createUserWithEmailAndPassword(auth, username, password)
     .then((userCredentials) => {
-      const user = userCredentials.user;
-      document.getElementById("email-enter").textContent = "";
-      document.getElementById("password-enter").textContent = "";
-      validation.textContent = "";
       location.href = "#close";
+      alert("You are signed up!");
     })
     .catch((error) => {
       validation.textContent = error.code;

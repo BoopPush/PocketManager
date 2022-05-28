@@ -186,11 +186,12 @@
               <a href="#close" title="Close" class="close">×</a>
             </div>
             <div class="modal-body"> 
-                <div><label>Enter your name: </label><span><input type="text"></span></div>
-                <div><label>Enter your surname: </label><span><input type="text"></span></div>
-                <div><label>Enter your email: </label><span><input type="text"></span></div>
-                <div><label>Enter your password: </label><span><input type="text"></span></div>
-                <div><button class="accept">Enter</button></div>
+                <!-- <div><label>Enter your name: </label><span><input type="text"></span></div>
+                <div><label>Enter your surname: </label><span><input type="text"></span></div> -->
+                <div><label>Enter your email: </label><span><input id="email-auth" type="text"></span></div>
+                <div><label>Enter your password: </label><span><input id="password-auth" type="text"></span></div>
+                <p class="validation1"></p>
+                <div><button id="btn-auth" class="accept">Enter</button></div>
             </div>
           </div>
         </div>
@@ -205,9 +206,10 @@
               <a href="#close" title="Close" class="close">×</a>
             </div>
             <div class="modal-body"> 
-                <div><label>Enter your email: </label><span><input type="text"></span></div>
-                <div><label>Enter your password: </label><span><input type="text"></span></div>
-                <div><button class="accept">Enter</button></div>
+                <div><label>Enter your email: </label><span><input id="email-enter" type="text"></span></div>
+                <div><label>Enter your password: </label><span><input id="password-enter"type="text"></span></div>
+                <p class="validation"></p>
+                <div><button id = "btn-enter" class="accept">Enter</button></div>
             </div>
           </div>
         </div>
@@ -215,5 +217,7 @@
     </form>
     <script src="script.js"></script> 
     <script type="module" src="server.js"></script>
-    <script src="enter.js"></script>
+    <script type="module" src="enter.js"></script>
+    <script type="module" src="registrate.js"></script>
+    <script type="module" src="dbManipulations.js"></script>
 </html>
