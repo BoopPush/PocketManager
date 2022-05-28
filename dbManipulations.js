@@ -59,7 +59,7 @@ submit.addEventListener("click", async function (event) {
     try {
       const docRef = await addDoc(collection(db, "transaction"), {
         amount: amount,
-        category: category,                                                                                                     
+        category: category,
         userID: auth.currentUser.uid
       });
 
@@ -69,7 +69,7 @@ submit.addEventListener("click", async function (event) {
     }
   }
   getString().then(() => {
-    // render();
+    render();
     location.href = "#close";
   });
 });
@@ -93,7 +93,7 @@ submitExp.addEventListener("click", async function (event) {
     try {
       const docRef = await addDoc(collection(db, "transaction"), {
         amount: amount,
-        category: category,                                                                                                     
+        category: category,
         userID: auth.currentUser.uid
       });
 
@@ -103,7 +103,75 @@ submitExp.addEventListener("click", async function (event) {
     }
   }
   getString().then(() => {
-    // render();
+    render();
     location.href = "#close";
   });
 });
+
+async function render() {
+  let transactions = [];
+
+  const querySnapshot = await getDocs(collection(db, "transaction"));
+  console.log(auth.currentUser.uid);
+  querySnapshot.forEach((doc) => {
+    if (auth.currentUser.uid != doc.data().userID) return;
+    const obj = {
+      id: doc.id,
+      data: doc.data(),
+    };
+    transactions.push(obj);
+  });
+  console.log(transactions)
+  let resultS = 0;
+  let resultL = 0;
+  let incomes = [];
+  let expenses = [];
+  transactions.forEach((transaction) => {
+    console.log("forEach");
+    switch (transaction.data.category) {
+      case "Salary":
+        console.log("s");
+        var val = transaction.data.amount;
+        resultS += Number(val);
+        salary.innerHTML = "+" + resultS;
+        showBalance(0, Number(val), incomes, expenses);
+        break;
+      case "Lottery":
+        var val = transaction.data.amount;
+        resultL += Number(val);
+        lottery.innerHTML = "+" + resultL;
+        showBalance(0, Number(val))
+        break;
+    }
+  });
+
+
+  function showBalance(val1, val2, incomes, expenses) {
+    const balance = document.getElementById("balance");
+    if (val1 == 0) {
+      incomes.push(val2);
+    }
+    else if (val2 == 0) {
+      expenses.push(val1);
+    }
+
+    let expenseResult = 0;
+    let incomeResult = 0;
+    expenses.forEach(element => {
+      expenseResult += element;
+    });
+    incomes.forEach(element => {
+      incomeResult += element;
+    });
+    console.log(incomes);
+    var result = incomeResult - expenseResult;
+    //console.log(result);
+    if (result < 0) {
+      balance.innerHTML = "Total balance: " + result;
+    }
+    else if (result > 0) {
+      balance.innerHTML = "Total balance: +" + result;
+    }
+  }
+}
+render();

@@ -68,55 +68,55 @@ addExpense.onclick = () => {
     }
 }
 
-addIncome.onclick = () => {
-    var select = document.getElementById("selectIncome");
-    var selectValue = select.value;
-    switch (selectValue) {
-        case "Salary":
-            var val = document.getElementById("ammountIncome").value;
-            var prevVal = salary.textContent;
-            console.log(prevVal);
-            let result = Number(val) + Number(prevVal);
-            salary.innerHTML = "+" + result;
-            showBalance(0,Number(val));
-            break;
-        case "Lottery":
-            var val = document.getElementById("ammountIncome").value;
-            var prevVal = lottery.textContent;
-            console.log(prevVal);
-            result = Number(val) + Number(prevVal);
-            lottery.innerHTML = "+" + result;
-            showBalance(0,Number(val))
-            break;
-    }
-}
+// addIncome.onclick = () => {
+//     var select = document.getElementById("selectIncome");
+//     var selectValue = select.value;
+//     switch (selectValue) {
+//         case "Salary":
+//             var val = document.getElementById("ammountIncome").value;
+//             var prevVal = salary.textContent;
+//             console.log(prevVal);
+//             let result = Number(val) + Number(prevVal);
+//             salary.innerHTML = "+" + result;
+//             showBalance(0,Number(val));
+//             break;
+//         case "Lottery":
+//             var val = document.getElementById("ammountIncome").value;
+//             var prevVal = lottery.textContent;
+//             console.log(prevVal);
+//             result = Number(val) + Number(prevVal);
+//             lottery.innerHTML = "+" + result;
+//             showBalance(0,Number(val))
+//             break;
+//     }
+// }
 
-const balance = document.getElementById("balance");
-function showBalance(val1,val2) {
-    if(val1 ==0){
-        incomes.push(val2);
-    }
-    else if(val2==0){
-        expenses.push(val1);
-    }
+// const balance = document.getElementById("balance");
+// function showBalance(val1,val2) {
+//     if(val1 ==0){
+//         incomes.push(val2);
+//     }
+//     else if(val2==0){
+//         expenses.push(val1);
+//     }
     
-    let expenseResult = 0;
-    let incomeResult = 0;
-    expenses.forEach(element => {
-        expenseResult += element;
-    });
-    incomes.forEach(element => {
-        incomeResult += element;
-    });
-    var result = incomeResult - expenseResult;
-    //console.log(result);
-    if (result < 0) {
-        balance.innerHTML = "Total balance: " + result;
-    }
-    else if (result > 0) {
-        balance.innerHTML = "Total balance: +" + result;
-    }
-}
+//     let expenseResult = 0;
+//     let incomeResult = 0;
+//     expenses.forEach(element => {
+//         expenseResult += element;
+//     });
+//     incomes.forEach(element => {
+//         incomeResult += element;
+//     });
+//     var result = incomeResult - expenseResult;
+//     //console.log(result);
+//     if (result < 0) {
+//         balance.innerHTML = "Total balance: " + result;
+//     }
+//     else if (result > 0) {
+//         balance.innerHTML = "Total balance: +" + result;
+//     }
+// }
 
 const monthInfo = document.getElementById("monthInfo");
 let monthCounter = 0
