@@ -124,6 +124,17 @@ async function render() {
   console.log(transactions)
   let resultS = 0;
   let resultL = 0;
+  let resultG = 0;
+  let resultC = 0;
+  let resultCl = 0;
+  let resultF = 0;
+  let resultSp = 0;
+  let resultE = 0;
+  let resultT = 0;
+
+
+
+
   let incomes = [];
   let expenses = [];
   transactions.forEach((transaction) => {
@@ -131,16 +142,58 @@ async function render() {
     switch (transaction.data.category) {
       case "Salary":
         console.log("s");
-        var val = transaction.data.amount;
+        let val = transaction.data.amount;
         resultS += Number(val);
         salary.innerHTML = "+" + resultS;
         showBalance(0, Number(val), incomes, expenses);
         break;
       case "Lottery":
-        var val = transaction.data.amount;
-        resultL += Number(val);
+        let valL = transaction.data.amount;
+        resultL += Number(valL);
         lottery.innerHTML = "+" + resultL;
-        showBalance(0, Number(val))
+        showBalance(0, Number(valL),incomes,expenses);
+        break;
+      case "Gifts":
+        let valG = transaction.data.amount;
+        resultG += Number(valG);
+        gifts.innerHTML = "-" + resultG;
+        showBalance(Number(valG), 0, incomes, expenses);
+        break;
+      case "Clubs":
+        let valC = transaction.data.amount;
+        resultCl += Number(valC);
+        clubs.innerHTML = "-" + resultCl;
+        showBalance(Number(valC), 0, incomes, expenses);
+        break;
+      case "Clothes":
+        let valCl = transaction.data.amount;
+        resultC += Number(valCl);
+        clothes.innerHTML = "-" + resultC;
+        showBalance(Number(valCl), 0, incomes, expenses);
+        break;
+      case "Food":
+        let valF = transaction.data.amount;
+        resultF += Number(valF);
+        food.innerHTML = "-" + resultF;
+        showBalance(Number(valF), 0, incomes, expenses);
+        break;
+      case "Sport":
+        let valSp = transaction.data.amount;
+        resultSp += Number(valSp);
+        sport.innerHTML = "-" + resultSp;
+        showBalance(Number(valSp), 0, incomes, expenses);
+        break;
+     case "Eating out":
+        let valE = transaction.data.amount;
+        resultE += Number(valE);
+        clubs.innerHTML = "-" + resultE;
+        showBalance(Number(valE), 0, incomes, expenses);
+        break; 
+      case "Taxi":
+        let valT = transaction.data.amount;
+        resultT += Number(valT);
+        taxi.innerHTML = "-" + resultT;
+        showBalance(Number(valT), 0, incomes, expenses);
         break;
     }
   });
@@ -164,7 +217,7 @@ async function render() {
       incomeResult += element;
     });
     console.log(incomes);
-    var result = incomeResult - expenseResult;
+    let result = incomeResult - expenseResult;
     //console.log(result);
     if (result < 0) {
       balance.innerHTML = "Total balance: " + result;
