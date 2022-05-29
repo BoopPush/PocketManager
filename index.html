@@ -58,62 +58,62 @@
                 <header>
                     <h3 class = "child" style="color: #172c66">Transaction</h3>
                     <button class = "child"><img src="Material/arrow-down.png" alt="Arrow-down" 
-                        style="vertical-align: middle"> </button>
+                        style="vertical-align: middle" id="sortBtn"> </button>
                 </header>
                 <section><ul class="expenses-list">
-                    <li>
+                    <li class="expenses-li">
                         <div class="expense-item"><button"><img src="Material/salary.png" alt="Club" 
                             style="vertical-align: middle"> </div>
                         <div class="expense-item"><p>Salary</p></div>
-                        <div class="expense-item"><p id = "salary" style="color: green; display: inline-block;">0</p><span class="dollar">$</span></div>
+                        <div class="expense-item"><p class="ammount" id = "salary" style="color: green; display: inline-block;">0</p><span class="dollar">$</span></div>
                     </li>
-                    <li>
+                    <li class="expenses-li">
                         <div class="expense-item"><button"><img src="Material/dj.png" alt="Club" 
                             style="vertical-align: middle"> </div>
                         <div class="expense-item"><p>Clubs</p></div>
-                        <div class="expense-item"><p id ="clubs" style="color: red; display: inline-block;">0</p><span class="dollar">$</span></div>
+                        <div class="expense-item"><p class="ammount" id ="clubs" style="color: red; display: inline-block;">0</p><span class="dollar">$</span></div>
                     </li>
-                    <li>
+                    <li class="expenses-li">
                         <div class="expense-item"><img src="Material/shoe.png" alt="Boot" 
                             style="vertical-align: middle"> </div>
                         <div class="expense-item"><p>Clothes</p></div>
-                        <div class="expense-item"><p id="clothes" style="color: red; display: inline-block;">0</p><span class="dollar">$</span></div>
+                        <div class="expense-item"><p class="ammount" id="clothes" style="color: red; display: inline-block;">0</p><span class="dollar">$</span></div>
                     </li>
-                    <li>
+                    <li class="expenses-li">
                         <div class="expense-item"><img src="Material/basket.png" alt="Food" 
                             style="vertical-align: middle"> </div>
                         <div class="expense-item"><p>Food</p></div>
-                        <div class="expense-item"><p id="food" style="color: red; display: inline-block;">0</p><span class="dollar">$</span></div>
+                        <div class="expense-item"><p class="ammount" id="food" style="color: red; display: inline-block;">0</p><span class="dollar">$</span></div>
                     </li>
-                    <li>
+                    <li class="expenses-li">
                         <div class="expense-item"><img src="Material/sport-jump.png" alt="Sport" 
                             style="vertical-align: middle"> </div>
                         <div class="expense-item"><p>Sport</p></div>
-                        <div class="expense-item"><p id="sport" style="color: red; display: inline-block;">0</p><span class="dollar">$</span></div>
+                        <div class="expense-item"><p class="ammount" id="sport" style="color: red; display: inline-block;">0</p><span class="dollar">$</span></div>
                     </li>
-                    <li>
+                    <li class="expenses-li">
                         <div class="expense-item"><img src="Material/catlery.png" alt="Restaurant" 
                             style="vertical-align: middle"></div>
                         <div class="expense-item"><p>Eating Out</p></div>
-                        <div class="expense-item"><p id="eatingOut" style="color: red; display: inline-block;">0</p><span class="dollar">$</span></div>
+                        <div class="expense-item"><p class="ammount" id="eatingOut" style="color: red; display: inline-block;">0</p><span class="dollar">$</span></div>
                     </li>
-                    <li>
+                    <li class="expenses-li">
                       <div class="expense-item"><img src="Material/lottery.png" alt="Lot" 
                           style="vertical-align: middle"></div>
                       <div class="expense-item"><p>Lottery</p></div>
-                      <div class="expense-item"><p id="lottery" style="color: green; display: inline-block;">0</p><span class="dollar">$</span></div>
+                      <div class="expense-item"><p class="ammount" id="lottery" style="color: green; display: inline-block;">0</p><span class="dollar">$</span></div>
                   </li>
-                    <li>
+                    <li class="expenses-li">
                         <div class="expense-item"><img src="Material/taxi.png" alt="Taxi" 
                             style="vertical-align: middle"></div>
                         <div class="expense-item"><p>Taxi</p></div>
-                        <div class="expense-item"><p id="taxi" style="color: red; display: inline-block;">0</p><span class="dollar">$</span></div>
+                        <div class="expense-item"><p class="ammount" id="taxi" style="color: red; display: inline-block;">0</p><span class="dollar">$</span></div>
                     </li>
-                    <li>
+                    <li class="expenses-li">
                         <div class="expense-item"><img src="Material/gift.png" alt="Gift" 
                             style="vertical-align: middle"></div>
                         <div class="expense-item"><p>Gifts</p></div>
-                        <div class="expense-item" ><p id="gifts" style="color: red; display: inline-block;">0</p><span class="dollar">$</span></div>
+                        <div class="expense-item" ><p class="ammount" id="gifts" style="color: red; display: inline-block;">0</p><span class="dollar">$</span></div>
                     </li>
                 </ul></section>
             </section>
@@ -248,4 +248,5 @@
     <script type="module" src="enter.js"></script>
     <script type="module" src="registrate.js"></script>
     <script type="module" src="dbManipulations.js"></script>
+    <script src="sorting.js"></script>
 </html>

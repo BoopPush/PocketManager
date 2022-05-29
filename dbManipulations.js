@@ -186,7 +186,7 @@ async function render() {
      case "Eating out":
         let valE = transaction.data.amount;
         resultE += Number(valE);
-        clubs.innerHTML = "-" + resultE;
+        eatingOut.innerHTML = "-" + resultE;
         showBalance(Number(valE), 0, incomes, expenses);
         break; 
       case "Taxi":
