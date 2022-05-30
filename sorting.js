@@ -17,5 +17,5 @@ btn.addEventListener('click', ()  =>{
     //     }
     // })
     
-    console.log(liArrayAmount);
+    //console.log(liArrayAmount);
 })
