@@ -456,6 +456,7 @@ nav a:hover {
   font-size: 1.25rem;
   font-weight: 500;
 }
+
 /* свойства для кнопки "Закрыть" */
 .close {
   float: right;
@@ -503,6 +504,7 @@ hr{
 
 span,h3,label{
   color:#001858;
+  font-weight: bold;
 }
 
 input{

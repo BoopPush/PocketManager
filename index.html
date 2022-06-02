@@ -6,16 +6,15 @@
     <body>
         <header class="wrapper">
             <section class ="child">
-                <div class = "month-info"><button><img src="Material/left-arrow.png" alt="Left" 
+                <div class = "month-info"><button  id="prevMonth"><img src="Material/left-arrow.png" alt="Left" 
                     style="vertical-align: middle"> </button></div>
-                <div class = "month-info"><p style="color: #172c66;">Month<p></p></div>
-                <div class="month-info"><button><img src="Material/right-arrow.png" alt="Right" 
-                    style="vertical-align: middle"> </button></div>
+                <div class = "month-info"><p style="color: #172c66; " id="monthInfo">Month<p></p></div>
+                <div class="month-info"><button id="nextMonth"><img src="Material/right-arrow.png" alt="Right" 
+                    style="vertical-align: middle" > </button></div>
             </section>
-            <section class = "child">
-                <button>Week</button>
-                <button>Month</button>
-                <button>Year</button>
+            <section class = "child" style="display: inline-block; width: 100%;">
+                <a href="#Authorization" class = "add-income" style="display: inline-block; margin-top: 35px;">Registrate</a>
+                  <a href="#Enter" class = "add-income" style="margin-top: 35px;">Enter</a>
             </section>
         </header>
         <main>
@@ -51,7 +50,7 @@
                       </svg>
                 </div>
                 <footer>
-                    <h3>Total balance: +1000<span class = "dollar">$</span></h3>
+                    <h3 style="display: inline-block;" id="balance">Total balance: 0</h3><span class = "dollar">$</span>
                 </footer>
             </section>
             <hr>
@@ -59,56 +58,62 @@
                 <header>
                     <h3 class = "child" style="color: #172c66">Transaction</h3>
                     <button class = "child"><img src="Material/arrow-down.png" alt="Arrow-down" 
-                        style="vertical-align: middle"> </button>
+                        style="vertical-align: middle" id="sortBtn"> </button>
                 </header>
                 <section><ul class="expenses-list">
-                    <li>
+                    <li class="expenses-li">
                         <div class="expense-item"><button"><img src="Material/salary.png" alt="Club" 
                             style="vertical-align: middle"> </div>
                         <div class="expense-item"><p>Salary</p></div>
-                        <div class="expense-item"><p style="color: green;">+2000<span class="dollar">$</span></p></div>
+                        <div class="expense-item"><p class="ammount" id = "salary" style="color: green; display: inline-block;">0</p><span class="dollar">$</span></div>
                     </li>
-                    <li>
+                    <li class="expenses-li">
                         <div class="expense-item"><button"><img src="Material/dj.png" alt="Club" 
                             style="vertical-align: middle"> </div>
                         <div class="expense-item"><p>Clubs</p></div>
-                        <div class="expense-item"><p style="color: red;">-150<span class="dollar">$</span></p></div>
+                        <div class="expense-item"><p class="ammount" id ="clubs" style="color: red; display: inline-block;">0</p><span class="dollar">$</span></div>
                     </li>
-                    <li>
+                    <li class="expenses-li">
                         <div class="expense-item"><img src="Material/shoe.png" alt="Boot" 
                             style="vertical-align: middle"> </div>
                         <div class="expense-item"><p>Clothes</p></div>
-                        <div class="expense-item"><p style="color: red;">0<span class="dollar">$</span></p></div>
+                        <div class="expense-item"><p class="ammount" id="clothes" style="color: red; display: inline-block;">0</p><span class="dollar">$</span></div>
                     </li>
-                    <li>
+                    <li class="expenses-li">
                         <div class="expense-item"><img src="Material/basket.png" alt="Food" 
                             style="vertical-align: middle"> </div>
                         <div class="expense-item"><p>Food</p></div>
-                        <div class="expense-item"><p style="color: red;">-431<span class="dollar">$</span></p></div>
+                        <div class="expense-item"><p class="ammount" id="food" style="color: red; display: inline-block;">0</p><span class="dollar">$</span></div>
                     </li>
-                    <li>
+                    <li class="expenses-li">
                         <div class="expense-item"><img src="Material/sport-jump.png" alt="Sport" 
                             style="vertical-align: middle"> </div>
                         <div class="expense-item"><p>Sport</p></div>
-                        <div class="expense-item"><p style="color: red;">-180<span class="dollar">$</span></p></div>
+                        <div class="expense-item"><p class="ammount" id="sport" style="color: red; display: inline-block;">0</p><span class="dollar">$</span></div>
                     </li>
-                    <li>
+                    <li class="expenses-li">
                         <div class="expense-item"><img src="Material/catlery.png" alt="Restaurant" 
                             style="vertical-align: middle"></div>
                         <div class="expense-item"><p>Eating Out</p></div>
-                        <div class="expense-item"><p style="color: red;">-12<span class="dollar">$</span></p></div>
+                        <div class="expense-item"><p class="ammount" id="eatingOut" style="color: red; display: inline-block;">0</p><span class="dollar">$</span></div>
                     </li>
-                    <li>
+                    <li class="expenses-li">
+                      <div class="expense-item"><img src="Material/lottery.png" alt="Lot" 
+                          style="vertical-align: middle"></div>
+                      <div class="expense-item"><p>Lottery</p></div>
+                      <div class="expense-item"><p class="ammount" id="lottery" style="color: green; display: inline-block;">0</p><span class="dollar">$</span></div>
+                  </li>
+                    <li class="expenses-li">
                         <div class="expense-item"><img src="Material/taxi.png" alt="Taxi" 
                             style="vertical-align: middle"></div>
                         <div class="expense-item"><p>Taxi</p></div>
-                        <div class="expense-item"><p style="color: red;">0<span class="dollar">$</span></p></div>
+                        <div class="expense-item"><p class="ammount" id="taxi" style="color: red; display: inline-block;">0</p><span class="dollar">$</span></div>
                     </li>
-                    <li>
+                    <li class="expenses-li">
                         <div class="expense-item"><img src="Material/gift.png" alt="Gift" 
                             style="vertical-align: middle"></div>
                         <div class="expense-item"><p>Gifts</p></div>
-                        <div class="expense-item"><p style="color: red;">-73<span class="dollar">$</span></p></div>
+                        <div class="expense-item" ><p class="ammount" id="gifts" style="color: red; display: inline-block;">0</p><span class="dollar">$</span></div>
                     </li>
                 </ul></section>
             </section>
@@ -116,8 +121,8 @@
         
         <footer class = "first_footer">
             <section class="f">
-                <nav><a href="#">Info</a>
-                <a href="#">About me</a></nav>
+                <nav><a href="#Info">Info</a>
+                <a href="#AboutMe">About me</a></nav>
             </section>
             <section class = "Copyright"><p>&copy Copyright 2022</p> </section>
         </footer>
@@ -131,14 +136,15 @@
               <a href="#close" title="Close" class="close">×</a>
             </div>
             <div class="modal-body">    
-              <div><span>Choose income: </span><span><select> 
+              <div><span>Choose income: </span><span>
+                <select id="selectIncome"> 
                 <option value="">Select an option</option> 
                 <option value="Salary">Salary</option> 
                 <option value="Lottery">Lottery</option> 
               </select>
                 </span></div>
-                <div><label>Enter ammount: </label><span><input type="text" id="ammount"></span></div>
-                <div><button class="accept">Accept</button></div>
+                <div><label>Enter ammount: </label><span><input type="text" id="ammountIncome"></span></div>
+                <div><button class="accept" id="addIncome">Accept</button></div>
             </div>
           </div>
         </div>
@@ -153,9 +159,11 @@
               <a href="#close" title="Close" class="close">×</a>
             </div>
             <div class="modal-body">    
-              <div><span>Choose expense: </span><span><select> 
+              <div><span>Choose expense: </span><span>
+                <select id="selectExpense"> 
                 <option value="">Select an option</option> 
-                <option value="Gifts">Gifts</option> 
+                <option value="Gifts">Gifts</option>
+                <option value="Food">Food</option> 
                 <option value="Sport">Sport</option> 
                 <option value="Taxi">Taxi</option> 
                 <option value="Eating out">Eating out</option>
@@ -163,14 +171,14 @@
                 <option value="Clothes">Clothes</option>
               </select>
                 </span></div>
-                <div><label>Enter ammount: </label><span><input type="text" id="ammount"></span></div>
-                <div><button class="accept">Accept</button></div>
+                <div><label>Enter ammount: </label><span><input type="text" id="ammountExpense"></span></div>
+                <div><button class="accept" id="addExpense">Accept</button></div>
             </div>
           </div>
         </div>
       </div>
     </form>
-    <form action="">
+    <form id="authorizationForm">
       <div id="Authorization" class="modal">
         <div class="modal-dialog">
           <div class="modal-content">
@@ -179,12 +187,67 @@
               <a href="#close" title="Close" class="close">×</a>
             </div>
             <div class="modal-body"> 
-                <div><label>Enter your name: </label><span><input type="text"></span></div>
-                <div><label>Enter your password: </label><span><input type="text"></span></div>
-                <div><button class="accept">Enter</button></div>
+                <div><label>Enter your email: </label><span><input id="email-auth" type="text"></span></div>
+                <div><label>Enter your password: </label><span><input id="password-auth" type="text"></span></div>
+                <p class="validation1"></p>
+                <div><button id="btn-auth" class="accept">Enter</button></div>
             </div>
           </div>
         </div>
       </div>
     </form>
+    <form id="">
+      <div id="Info" class="modal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h3 class="modal-title">Info</h3>
+              <a href="#close" title="Close" class="close">×</a>
+            </div>
+            <div class="modal-body"> 
+                <p>This is my itirod project.Here you can admire excellent skills of css,js and html. The connection to database is provided by firebase db. Data is updating with any manupulation. You can also enter or regist. Have a nice day ;)</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+    <form id="">
+      <div id="AboutMe" class="modal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h3 class="modal-title">About me</h3>
+              <a href="#close" title="Close" class="close">×</a>
+            </div>
+            <div class="modal-body"> 
+                <p>I'm Danila Lozko. I'm 20 years old. And I'm really looking forward to become a great specialatist in software engineering. Stay tuned...</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+    <form id="enterForm">
+      <div id="Enter" class="modal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h3 class="modal-title">Enter</h3>
+              <a href="#close" title="Close" class="close">×</a>
+            </div>
+            <div class="modal-body"> 
+                <div><label>Enter your email: </label><span><input id="email-enter" type="text"></span></div>
+                <div><label>Enter your password: </label><span><input id="password-enter"type="text"></span></div>
+                <p class="validation"></p>
+                <div><button id = "btn-enter" class="accept">Enter</button></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+    <script src="script.js"></script> 
+    <script type="module" src="server.js"></script>
+    <script type="module" src="enter.js"></script>
+    <script type="module" src="registrate.js"></script>
+    <script type="module" src="dbManipulations.js"></script>
+    <script src="sorting.js"></script>
 </html>
